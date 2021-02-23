@@ -1,0 +1,5 @@
+.landing__container {
+  background-color: #272743;
+  background-image: url('../../images/stars.svg');
+  height: calc(100vh - 60px);
+}
