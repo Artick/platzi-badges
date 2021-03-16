@@ -3,6 +3,25 @@ import {Link} from 'react-router-dom';
 
 import './styles/BadgesList.css';
 
+class BadgesListItem extends React.Component {
+  render () {
+    return (
+      <div className="card">
+        <img src={this.props.badge.avatarUrl} alt="Avatar" />
+        <div className="card__info">
+          <p className="font-weight-bold">
+            {this.props.badge.firstName} {this.props.badge.lastName}
+          </p>
+          <p className="text-info">@{this.props.badge.twitter}</p>
+          <p className="font-italic">
+            {this.props.badge.jobTitle}
+          </p>
+        </div>
+      </div>
+    );
+  }
+}
+
 class BadgesList extends React.Component {
   render () {
     if (this.props.badges.length === 0) {
@@ -21,18 +40,7 @@ class BadgesList extends React.Component {
         {this.props.badges.map (badge => {
           return (
             <li key={badge.id}>
-              <div className="card">
-                <img src={badge.avatarUrl} alt="Avatar" />
-                <div className="card__info">
-                  <p className="font-weight-bold">
-                    {badge.firstName} {badge.lastName}
-                  </p>
-                  <p className="text-info">@{badge.twitter}</p>
-                  <p className="font-italic">
-                    {badge.jobTitle}
-                  </p>
-                </div>
-              </div>
+              <BadgesListItem badge={badge} />
             </li>
           );
         })}
