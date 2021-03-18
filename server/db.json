@@ -448,6 +448,14 @@
       "jobTitle": "Frontend Developer",
       "twitter": "artick",
       "id": "CgExSRY"
+    },
+    {
+      "firstName": "Snoopy",
+      "lastName": "Kaufman",
+      "email": "snoopy@example.com",
+      "jobTitle": "Super Dog",
+      "twitter": "snoopysuperdog",
+      "id": "SAf4Ail"
     }
   ]
 }
